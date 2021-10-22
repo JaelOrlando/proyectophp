@@ -26,11 +26,11 @@
                 </a>
 
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
-                    <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
-                    <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
-                    <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
-                    <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+                    <li><a class="btn btn-info mx-2" href="armas.php">Armas</a></li>
+                    <li><a class="btn btn-info mx-2" href="vehiculos.php">Vehiculos</a></li>
+                    <li><a class="btn btn-info mx-2" href="libros.php">Libros</a></li>
+                    <li><a class="btn btn-info mx-2" href="componentes.php">Componentes</a></li>
+                    <li><a class="btn btn-info mx-2" href="alumnos.php">Alumnos</a></li>
                 </ul>
 
                 <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
@@ -44,12 +44,5 @@
             </div>
         </div>
     </header>
-    <div class="container my-3">
-        <a class="btn btn-info" href="armas.php">Armas</a>
-        <a class="btn btn-info" href="vehiculos.php">Vehiculos</a>
-        <a class="btn btn-info" href="libros.php">Libros</a>
-        <a class="btn btn-info" href="componentes.php">Componentes</a>
-        <a class="btn btn-info" href="alumnos.php">Alumnos</a>
-    </div>
 
-    <?php require_once 'db/conexion.php';?>
+    <?php require_once 'db/conexion.php'; ?>

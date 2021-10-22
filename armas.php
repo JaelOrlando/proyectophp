@@ -25,31 +25,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="text-center">
             <h1>Armas PUBG</h1>
         </div>
-        <div class="mb-3 row">
-            <label for="" class="col-sm-2 col-form-label">Nombre de la arma</label>
-            <div class="col-sm-10">
+        <div class="w-50 mx-auto">
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Nombre de la arma</span>
                 <input type="text" class="form-control" name="nombre">
             </div>
-        </div>
-        <div class="mb-3 row">
-            <label for="" class="col-sm-2 col-form-label">Daño</label>
-            <div class="col-sm-10">
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Daño</span>
                 <input type="text" class="form-control" name="daño">
             </div>
-        </div>
-        <div class="mb-3 row">
-            <label for="" class="col-sm-2 col-form-label">Color</label>
-            <div class="col-sm-10">
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Color</span>
                 <input type="text" class="form-control" name="color">
             </div>
-        </div>
-        <div class="mb-3 row">
-            <label for="" class="col-sm-2 col-form-label">Peso</label>
-            <div class="col-sm-10">
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Peso</span>
                 <input type="text" class="form-control" name="peso">
             </div>
         </div>
-
         <div class="mb-3 container w-50">
             <input type="file" accept="image/*" class="form-control" name="imagen" value="">
 

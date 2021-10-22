@@ -1,6 +1,6 @@
 <?php require_once 'include/header.php'; ?>
 <form action="añadirlibro.php" method="post" enctype="multipart/form-data">
-    <div class="container form-control">
+    <div class="container bg-secondary form-control">
        <div class="text-center"> 
            <h2>Libros</h2>
         </div>
