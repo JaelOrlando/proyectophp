@@ -1,6 +1,27 @@
-<?php require_once 'include/header.php'; ?>
-<form action="añadirarma.php" method="post" enctype="multipart/form-data">
-    <div class="container form-control bg-secondary">
+<?php require_once 'include/header.php';
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $nombre = $_POST['nombre'];
+    $daño = $_POST['daño'];
+    $color = $_POST['color'];
+    $peso = $_POST['peso'];
+    $imagen = $_FILES['imagen'];
+
+    $target_dir = 'imagenes/';
+    $orig_file = $_FILES["imagen"]["tmp_name"];
+    $destination = $target_dir . $nombre;
+    move_uploaded_file($orig_file, $destination);
+
+    include_once 'db/conexion.php';
+
+    $query = mysqli_query($con, "INSERT INTO armas (nombre_arma, daño, color, peso, imagen) VALUES ('$nombre', $daño, '$color', $peso, '$nombre')");
+
+    echo '<div class="alert alert-success container" role="alert">Arma guardada correctamente</div>';
+}
+
+?>
+<form action="" method="post" enctype="multipart/form-data">
+    <div class="container form-control bg-secondary mb-5">
         <div class="text-center">
             <h1>Armas PUBG</h1>
         </div>
@@ -25,7 +46,7 @@
         <div class="mb-3 row">
             <label for="" class="col-sm-2 col-form-label">Peso</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" name=="peso">
+                <input type="text" class="form-control" name="peso">
             </div>
         </div>
 
