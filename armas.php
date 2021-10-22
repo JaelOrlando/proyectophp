@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $target_dir = 'imagenes/';
     $orig_file = $_FILES["imagen"]["tmp_name"];
-    $destination = $target_dir . $nombre;
+    $destination = $target_dir . $imagen['name'];
     move_uploaded_file($orig_file, $destination);
 
     include_once 'db/conexion.php';

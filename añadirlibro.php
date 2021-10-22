@@ -9,7 +9,7 @@ if (isset($_POST['libro'])){
 
     $target_dir='imagenes/';
     $orig_file=$_FILES["imagen"]["tmp_name"];
-    $destination=$target_dir.$titulo;
+    $destination=$target_dir.$imagen['name'];
     move_uploaded_file($orig_file, $destination);
 
     header("Location: libros.php");
