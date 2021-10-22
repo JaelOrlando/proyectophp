@@ -1,4 +1,28 @@
-<?php require_once 'include/header.php'; ?>
+<?php require_once 'include/header.php'; 
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+    $titulo=$_POST['basic-addon1'];
+    $autor=$_POST['basic-addon2'];
+    $genero=$_POST['basic-addon3'];
+    $fecha=$_POST['basic-addon4'];
+    $precio=$_POST['basic-addon5'];
+    $imagen=$_FILES['imagen'];
+
+    $target_dir='imagenes/';
+    $orig_file=$_FILES["imagen"]["tmp_name"];
+    $destination=$target_dir.$imagen['name'];
+    move_uploaded_file($orig_file, $destination);
+
+    header("Location: libros.php");
+
+    include_once 'db/conexion.php';
+    
+    $query = mysqli_query($con, "INSERT INTO libros (titulo, autor, genero, fecha, precio, imagen) VALUES ('$titulo', $autor, '$genero', $fecha, $precio, '$imagen')");
+
+    echo '<div class="alert alert-success container" role="alert">Arma guardada correctamente</div>';
+}
+?>
+
 <form action="añadirlibro.php" method="post" enctype="multipart/form-data">
     <div class="container bg-secondary form-control">
        <div class="text-center"> 
